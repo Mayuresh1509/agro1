@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<head>
+<style>
+input {
+  display: inline-block;
+  float: conter;
+  text-align: center;
+}
+</style>
+</head>
+
+<body style="background-color:PaleGreen";>
+ <div style="text-align:center;">
+	<h1 style="color:Orange;text-align:center;font-family:verdana;"><u>Agro Advisor- A Crop Recommendation</u></h1>
+
+     
+    <form action="{{ url_for('predict')}}"method="post">
+    	<label style="text-align:center;" for="Temperature"><b>Temperature:</b></label><br>
+    	<input type="text" name="Temperature" placeholder="Enter in degree celsius" required="required" /><br><br>
+        <label style="text-align:center;" for="Humidity"><b>Humidity:</b></label><br>
+        <input type="text" name="Humidity" placeholder="Enter in %" required="required" /><br><br>
+		<label style="text-align:center;" for="PH"><b>PH:</b></label><br>
+		<input type="text" name="PH" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="rain_fall"><b>Rain Fall:</b></label><br>
+		<input type="text" name="rain_fall" placeholder="Enter in mm" required="required" /><br><br>
+		<label style="text-align:center;" for="k"><b>Potassium (K) in the Soil:</b></label><br>
+		<input type="text" name="k" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="n"><b>Nitrogen (N) in the Soil:</b></label><br>
+		<input type="text" name="n" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="p"><b>Phosphorous (P) in the Soil:</b></label><br>
+		<input type="text" name="p" placeholder="Enter the value" required="required" /><br><br>
+		<button class="button"><b>Predict</b></button><br><br>
+    </form>
+    
+       <b> {{ prediction_text }}<b>
+    
+ </div>
+ 
+</body>
+</html>

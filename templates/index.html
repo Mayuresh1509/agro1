@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1> Agro Advisor - A Crop Recommendation System </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<label style="text-align:center;" for="Temperature"><b>Temperature:</b></label><br>
+    	<input type="text" name="Temperature" placeholder="Enter in degree celsius" required="required" /><br><br>
+        <label style="text-align:center;" for="Humidity"><b>Humidity:</b></label><br>
+        <input type="text" name="Humidity" placeholder="Enter in %" required="required" /><br><br>
+		<label style="text-align:center;" for="PH"><b>PH:</b></label><br>
+		<input type="text" name="PH" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="rain_fall"><b>Rain Fall:</b></label><br>
+		<input type="text" name="rain_fall" placeholder="Enter in mm" required="required" /><br><br>
+		<label style="text-align:center;" for="k"><b>Potassium (K) in the Soil:</b></label><br>
+		<input type="text" name="k" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="n"><b>Nitrogen (N) in the Soil:</b></label><br>
+		<input type="text" name="n" placeholder="Enter the value" required="required" /><br><br>
+		<label style="text-align:center;" for="p"><b>Phosphorous (P) in the Soil:</b></label><br>
+		<input type="text" name="p" placeholder="Enter the value" required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
