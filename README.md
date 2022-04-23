@@ -24,4 +24,4 @@ Only three algorithms are used to predict the output. They are *Logistic Regress
 ## Deployment : 
 I have used both *flask* and *streamlit* libraries to create the application.\
 The application is deployed in *Heroku* platform.
-App URL : https://crop-recommend.herokuapp.com/
+App URL : 
