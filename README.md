@@ -1,4 +1,4 @@
-# Crop-Recommendation
+# Crop-Recommendation 
 Dataset is taken from Kaggle. Link : https://www.kaggle.com/atharvaingle/crop-recommendation-dataset
 
 ## Variable Details:
@@ -21,7 +21,4 @@ Only three algorithms are used to predict the output. They are *Logistic Regress
 3. Accuracy of the model using XGBoost Classifier is 99%.\
 *Random Forest Classifier* is used for development of model.
 
-## Deployment : 
-I have used both *flask* and *streamlit* libraries to create the application.\
-The application is deployed in *Heroku* platform.
-App URL : 
+
