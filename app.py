@@ -53,7 +53,7 @@ def main():
     if st.button('Predict'):
         prediction = predict(n, p, k, temp, humi, ph, rain)
         b5, res, b6 = st.columns([1, 5, 1])
-        res.header('Recommended Crop : {}'.format(prediction))
+        res.header('Recommend Crop : {}'.format(prediction))
 
     if st.checkbox('Charts'):
         _, res, b4 = st.columns([1, 5, 1])
